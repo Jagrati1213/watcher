@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .search-input {
+        @apply bg-transparent w-11/12 h-full px-3 border-[1px] border-gray-400 rounded-s-full bg-white overflow-hidden flex items-center outline-none;
+    }
+
+    .search-btn {
+        @apply text-xl h-full px-10 py-3 rounded-e-full bg-gray-300;
+    }
+}
