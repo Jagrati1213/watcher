@@ -4,6 +4,7 @@ import { RiSearch2Line } from "react-icons/ri";
 import { FaUserCircle } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../../utils/redux/slices/appSlice';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -16,7 +17,9 @@ const Header = () => {
 
             <div className='flex items-center gap-3'>
                 <p className='text-xl cursor-pointer hover:text-yellow-700' onClick={handleToggleMenu}><RiMenu2Line /></p>
-                <h2 className='text-2xl text-yellow-700 font-bold'>The Watcher</h2>
+                <h2 className='text-2xl text-yellow-700 font-bold'>
+                    <Link to={'/'}>The Watcher</Link>
+                </h2>
             </div>
 
             <div className='flex w-1/2'>
