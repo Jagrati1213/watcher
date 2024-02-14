@@ -1,12 +1,12 @@
 import React from 'react'
-import MainContainer from '../mainContainer/MainContainer';
 import Menu from '../sidebar/Menu';
+import { Outlet } from 'react-router';
 
 function Body() {
     return (
-        <div className='flex gap-2'>
+        <div className='flex gap-2 h-screen mt-24'>
             <Menu />
-            <MainContainer />
+            <Outlet />
         </div>
     )
 }
