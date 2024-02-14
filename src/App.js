@@ -24,7 +24,6 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <div className="App min-h-screen">
-      <Header />
       <RouterProvider router={appRouter} />
     </div>
   );
