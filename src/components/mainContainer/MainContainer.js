@@ -7,7 +7,7 @@ import { useFetchYoutubeVideos } from '../../utils/hooks/useFetchYoutubeVideos';
 const MainContainer = () => {
 
     const { isMenuOpen } = useSelector((store) => store.appConfig);
-    const { error } = useFetchYoutubeVideos();
+    const { error, youData } = useFetchYoutubeVideos();
 
     return (
         <div className={`${isMenuOpen ? 'ml-48' : 'mx-4'} flex-1 py-10`}>
@@ -15,7 +15,7 @@ const MainContainer = () => {
                 error ? <h1 className='text-xl text'>Error fetching YouTube videos :{error}</h1> :
                     <>
                         <ButtonList />
-                        <VideoContainer />
+                        <VideoContainer data={youData} />
                     </>
             }
         </div>
