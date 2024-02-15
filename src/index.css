@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+    .header {
+        @apply w-full py-6 px-8 shadow-md shadow-slate-200 flex justify-between bg-white z-50 fixed top-0;
+    }
+
     .search-input {
         @apply bg-transparent w-11/12 h-full px-3 border-[1px] border-gray-400 rounded-s-full bg-white overflow-hidden flex items-center outline-none;
     }
@@ -17,5 +21,13 @@
 
     .menu-item {
         @apply flex items-center gap-5 text-base py-1 hover:text-yellow-800 cursor-pointer hover:font-bold;
+    }
+
+    .search-list-container {
+        @apply absolute top-12 px-5 bg-white w-11/12 rounded-b-lg shadow-md h-48 overflow-y-scroll;
+    }
+
+    .search-list {
+        @apply text-base px-2 py-1 rounded capitalize cursor-pointer hover:bg-gray-200 flex items-center gap-3;
     }
 }
