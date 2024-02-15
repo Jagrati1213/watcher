@@ -15,9 +15,11 @@ const VideoCard = ({ data }) => {
     }
 
     return (
-        <div className='w-80 p-5 bg-gray-100 hover:shadow-lg transform cursor-pointer'>
+        <div className='p-5 bg-gray-100 hover:shadow-lg transform cursor-pointer h-full w-full'>
             <div>
-                <img src={data?.snippet?.thumbnails?.medium?.url} alt={data?.channelTitle} className='rounded' />
+                <img src={data?.snippet?.thumbnails?.medium?.url}
+                    alt={data?.channelTitle}
+                    className='rounded w-full object-cover' />
             </div>
             <h3 className='font-semibold'>{`${data?.snippet?.title.slice(0, 60)}...`}</h3>
             <h5 className='text-sm text-gray-500 font-semibold py-1 tracking-wide'>{data?.snippet?.channelTitle}</h5>
