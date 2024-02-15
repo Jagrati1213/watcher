@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
+import CommentSection from '../commentsection/CommentSection';
 
 const Watch = () => {
 
@@ -17,6 +18,7 @@ const Watch = () => {
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen></iframe>
+                <CommentSection />
             </div>
         </div >
     )
