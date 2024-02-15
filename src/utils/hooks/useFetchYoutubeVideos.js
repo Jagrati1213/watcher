@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import { VIDEO_API_URL } from "../constant";
 
-export const useFetchYoutubeVideos = () => {
+export const useFetchYoutubeVideos = (fetchUrl, dependency = []) => {
 
     const [youData, setYouData] = useState([]);
     const [error, setError] = useState(null);
 
     const getVideos = async () => {
         try {
-            const response = await fetch(VIDEO_API_URL);
+            const response = await fetch(fetchUrl);
             const data = await response.json();
             if (!response.ok) throw new Error(`${response.status}`);
 
@@ -25,7 +24,7 @@ export const useFetchYoutubeVideos = () => {
 
     useEffect(() => {
         getVideos();
-    }, []);
+    }, dependency);
 
     return { youData, error };
 }
