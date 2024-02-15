@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { RiMenu2Line } from "react-icons/ri";
 import { RiSearch2Line } from "react-icons/ri";
 import { FaUserCircle } from "react-icons/fa";
@@ -10,6 +10,7 @@ import { useFetchYoutubeSearches } from '../../utils/hooks/useFetchYoutubeSearch
 const Header = () => {
 
     const dispatch = useDispatch();
+    const searchInputRef = useRef(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [hideSuggestion, setHideSuggestion] = useState(false);
 
@@ -18,6 +19,18 @@ const Header = () => {
     }
 
     const searchData = useFetchYoutubeSearches(searchQuery);
+
+    useEffect(() => {
+        const handleDocumentClick = (event) => {
+            if (searchInputRef.current && !searchInputRef.current.contains(event.target)) {
+                setHideSuggestion(false);
+            }
+        };
+        document.body.addEventListener('click', handleDocumentClick);
+        return () => {
+            document.body.removeEventListener('click', handleDocumentClick);
+        };
+    }, []);
 
     return (
         <header className='header'>
@@ -32,10 +45,10 @@ const Header = () => {
             <div className='flex w-1/2 flex-col relative'>
                 <div className='flex w-full'>
                     <input
+                        ref={searchInputRef}
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onFocus={() => setHideSuggestion(true)}
-                        onBlur={() => setHideSuggestion(false)}
                         type='text'
                         placeholder='Search'
                         className='search-input' />
@@ -48,10 +61,13 @@ const Header = () => {
                         <ul className='py-2'>
                             {
                                 searchData?.map((item, index) => {
-                                    return <li key={index}
-                                        className='search-list'>
-                                        <RiSearch2Line />{item}
-                                    </li>
+                                    return <Link to={`/results?search_query=${searchQuery}`}
+                                        key={index}>
+                                        <li className='search-list'
+                                            onClick={() => setHideSuggestion(false)}>
+                                            <RiSearch2Line />{item}
+                                        </li>
+                                    </Link>
                                 })
                             }
                         </ul>
