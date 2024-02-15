@@ -1,16 +1,14 @@
 import React from 'react'
-import { useFetchYoutubeVideos } from '../../utils/hooks/useFetchYoutubeVideos';
 import VideoCard from '../videoCard/VideoCard';
 import { Link } from 'react-router-dom';
 
-const VideoContainer = () => {
+const VideoContainer = ({ data }) => {
 
-    const { youData } = useFetchYoutubeVideos();
-    if (youData?.length === 0) return;
+    if (data?.length === 0) return;
     return (
         <div className='flex flex-wrap gap-5'>
             {
-                youData?.map((item) => {
+                data?.map((item) => {
                     return <Link to={`/watch?v=${item.id}`} key={item.id} className='w-full md:w-80'>
                         <VideoCard data={item} />
                     </Link>
