@@ -18,14 +18,13 @@ export const useFetchYoutubeSearches = (searchQuery) => {
     const dispatch = useDispatch();
 
     const getSearchSuggestion = async () => {
-        console.log('API call- ', searchQuery);
+
         const response = await fetch(YOUTUBE_SEARCH_API + searchQuery);
         const data = await response.json();
         setSearchData(data[1]);
         dispatch(cacheResult({
             [searchQuery]: data[1]
         }))
-
     }
 
     useEffect(() => {
