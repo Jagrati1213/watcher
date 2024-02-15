@@ -1,15 +1,13 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import CommentSection from '../commentsection/CommentSection';
 
 const Watch = () => {
 
-    const { isMenuOpen } = useSelector((store) => store.appConfig);
     const [searchParams] = useSearchParams();
 
     return (
-        <div className={`${isMenuOpen ? 'ml-48' : 'ml-5'} flex-1`}>
+        <div className='flex-1'>
             <div>
                 <iframe width="1160"
                     height="615"
