@@ -3,3 +3,5 @@ export const VIDEO_API_URL = `https://youtube.googleapis.com/youtube/v3/videos?p
 export const YOUTUBE_SEARCH_API = 'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=';
 
 export const YOUTUBE_SEARCH_QUERY_API = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=';
+
+export const LIVE_CHAT_COUNT = 15;
