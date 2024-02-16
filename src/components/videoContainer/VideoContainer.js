@@ -7,7 +7,7 @@ const VideoContainer = ({ data }) => {
     if (data?.length === 0) return;
 
     return (
-        <div className='flex flex-wrap gap-5'>
+        <div className='flex flex-wrap gap-5 justify-center'>
             {data?.map((item, index) => {
                 const id = item?.id?.videoId || item?.id;
 
