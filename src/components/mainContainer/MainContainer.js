@@ -12,7 +12,7 @@ const MainContainer = () => {
             {
                 error ? <h1 className='text-xl text'>Error fetching YouTube videos :{error}</h1> :
                     <>
-                        <ButtonList />
+                        {/* <ButtonList /> */}
                         <VideoContainer data={youData} />
                     </>
             }

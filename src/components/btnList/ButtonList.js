@@ -3,7 +3,7 @@ import btnData from '../../utils/data/btnList.json';
 
 const ButtonList = () => {
     return (
-        <div className='flex w-full gap-3 mb-4 '>
+        <div className='flex w-full gap-3 mb-4 overflow-x-scroll'>
             {
                 btnData?.map((btn, index) => {
                     return <WatcherButton name={btn.name} key={index} />
