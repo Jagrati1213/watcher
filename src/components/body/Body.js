@@ -10,8 +10,8 @@ function Body() {
     return (
         <div className='flex gap-2 h-screen mt-24'>
             <Header />
-            <Menu />
-            <div className={`${isMenuOpen ? 'ml-48' : 'ml-5'} flex-1`}>
+            {/* <Menu /> */}
+            <div className={`${isMenuOpen ? '' : ''} mx-5 flex-1`}>
                 <Outlet />
             </div>
         </div>
