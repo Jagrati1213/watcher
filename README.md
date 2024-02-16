@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Watcher
+Watcher is a dynamic web application that empowers users to explore a world of videos tailored to their interests. Using the YouTube API, Watcher recommends relevant videos based on user searches, creating a seamless video-watching experience. Dive into your favorite content, and engage with others through live chat, adding a social element to your viewing adventure.
+[watcher](https://watcher-omega.vercel.app/)
+## Technologies Used:
+- **React JS:** A powerful JavaScript library for building interactive user interfaces.
+- **Hooks:** Leverage React Hooks to manage state and side effects efficiently.
+- **Redux:** A predictable state container for JavaScript apps, ensuring a centralized and consistent state management.
+- **YouTube API:** Integrate the YouTube API to fetch and display video content based on user searches.
+- **Tailwind CSS:** Utilize a utility-first CSS framework for rapid and responsive UI development.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features:
+1. **Search and Recommendations:**
+   - Users can search for any topic, and Watcher provides personalized video recommendations.
+   - Dynamically fetch and display YouTube videos using the YouTube API.
 
-## Available Scripts
+2. **Video Player:**
+   - Seamless integration with YouTube for an immersive video-watching experience.
+   - Click on any recommended video to view it directly on Watcher.
 
-In the project directory, you can run:
+3. **Live Chat:**
+   - Engage with the community through a live chat feature.
+   - Share thoughts, opinions, and reactions with fellow viewers.
 
-### `npm start`
+4. **User-Friendly Interface:**
+   - Intuitive and responsive design for a smooth and enjoyable user experience.
+   - Tailwind CSS ensures a modern and visually appealing UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started:
+1. Clone the repository: `git clone https://github.com/Jagrati1213/watcher.git`
+2. Install dependencies: `npm install`
+3. Set up API keys:
+   - Obtain a YouTube API key from the [Google Developers Console](https://console.developers.google.com/).
+   - Replace the placeholder in the project with your API key.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Run the application: `npm start`
+5. Access the app at [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm test`
+## Feedback and Support:
+If you encounter any issues or have suggestions for improvement, please open an issue on the GitHub repository. We appreciate your feedback!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Enjoy your personalized video journey with Watcher! 🚀
 
-### `npm run build`
+## Project Screenhshots:
+![image](https://github.com/Jagrati1213/watcher/assets/85276293/34949d95-b686-427a-b713-e3b9c40ece61)
+![image](https://github.com/Jagrati1213/watcher/assets/85276293/d6279e6f-068b-4a36-9d90-3c44e90830a8)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
