@@ -15,10 +15,7 @@ const Result = () => {
         <div>
             {
                 error ? <h1 className='text-xl text'>Error fetching YouTube videos :{error}</h1> :
-                    <>
-                        <h1>Results:</h1>
-                        <VideoContainer data={youData} />
-                    </>
+                    <VideoContainer data={youData} />
             }
         </div>
     )
