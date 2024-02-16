@@ -9,7 +9,7 @@ const Watch = () => {
 
     return (
         <div className='flex gap-1 flex-col lg:flex-row'>
-            <div className='w-full xl:w-1/2 h-[700px] flex-none lg:flex-1 bg-gray-200'>
+            <div className='w-full lg:w-4/5 h-[500px] md:h-[700px] bg-gray-200 z-30'>
                 <iframe
                     className='w-full h-full'
                     src={`https://www.youtube.com/embed/${searchParams.get("v")}`}
