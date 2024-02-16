@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 
+/**
+ *  Function use to fetch youtube videos details from the api.
+ * 
+ * @param searchQuery : A function take search query for fetch user's searched data.
+ * 
+ * @returns `youData, error` : A function returns array of videos and error that relate to searchQuery.
+ */
 export const useFetchYoutubeVideos = (fetchUrl, dependency = []) => {
 
     const [youData, setYouData] = useState([]);
