@@ -37,7 +37,7 @@ const LiveChat = () => {
     }
 
     return (
-        <div className='border-2 border-gray-300 flex-1 rounded'>
+        <div className='border-2 border-gray-300 w-full lg:w-96 rounded mt-4 lg:mt-0'>
             <h2 className='text-xl bg-gray-200 p-2 font-bold'>Live Chat</h2>
             <div className='h-[600px] overflow-y-scroll flex flex-col-reverse p-2'>
                 {
